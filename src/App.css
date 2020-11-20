@@ -1,0 +1,12 @@
+body{
+    background-image: url("./components/Pic/result-bg.png");
+    height: 100vh;
+    min-height: 500px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-weight: 400;
+    line-height: 1.65;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }

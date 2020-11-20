@@ -6,6 +6,7 @@ import logo from './components/Pic/halfhalf-logo.png';
 import logo2 from './components/Pic/halfhalf-logo-mini.png';
 import {Dropdown, Icon, Input} from 'semantic-ui-react';
 import filter from './components/Pic/filter.png'
+import './App.css';
 
 
 
@@ -18,12 +19,22 @@ const App = () => {
     const [value, setValue] = useState("ร้านอาหารและเครื่องดื่ม");
     const [value2, setValue2] = useState("อาหารทั่วไป อาหารตามสั่ง อาหารจานเดียว");
     const [categorie2, setCategories2] = useState([]);
+    const [open, setOpen] = useState(false);
 
     const trigger = (
         <span>
           <Icon name='map marker alternate' /> พื้นที่ใกล้ฉัน
         </span>
       )
+
+    const handleChange =() => {
+        return(
+            <div className="wrapper">
+                {console.log('kk')}
+                <img id="slide" src="http://lorempixel.com/output/cats-q-c-100-100-4.jpg" />
+            </div>
+        )
+    }
 
     const Tomap = () => {
         return(
@@ -90,7 +101,7 @@ const App = () => {
                     {merchant.map(shop => {
                         return(
                             <div className="main col-md-3 col-sm-12 col-xs-12">
-                                <div className="cajaContenido col-sm-12">
+                                <div className="cajaContenido col-sm-8">
                                     <img className="ShopPic" src={shop.coverImageId} />
                                         <div className="ShopDetail">
                                             <h2><strong>{shop.shopNameTH}</strong></h2>
@@ -112,7 +123,7 @@ const App = () => {
                 <div> 
                         <div>
                             {merchant.filter(shops => shops.subcategoryName === value2).map( shop2 => (
-                                <div className="main col-md-3 col-sm-12 col-xs-12">
+                                <div className="main">
                                     <div className="cajaContenido col-sm-12">
                                     <img className="ShopPic" src={shop2.coverImageId} />
                                     <div className="ShopDetail">
@@ -151,7 +162,7 @@ const App = () => {
                 <img className="LogoPic visible-xs" src={logo2} /><t /><s />
                 <Dropdown className="drowdown visible-lg visible-md visible-sm" search selection trigger={trigger}/>
                 <Input className="searchbar" fluid action={{ icon: 'search' }} placeholder='ค้น ชื่อ ร้านอาหาร และ เครื่องดื่ม ร้านธงฟ้า ร้านOTOP และ ร้านทั่วไป' />
-                <img className="visible-xs" src={filter} /><t /><s />
+                <img className="visible-xs" src={filter} onClick={handleChange} /><t /><s />
             </div>
             <div className="header">หน้าแรก / ค้นหา</div>
             <br />

@@ -7,8 +7,7 @@ import logo2 from './components/Pic/halfhalf-logo-mini.png';
 import {Dropdown, Icon, Input} from 'semantic-ui-react';
 import filter from './components/Pic/filter.png'
 import './App.css';
-
-
+import ReactHtmlParser from 'react-html-parser';
 
 const App = () => {
     let total = 0;
@@ -19,7 +18,6 @@ const App = () => {
     const [value, setValue] = useState("ร้านอาหารและเครื่องดื่ม");
     const [value2, setValue2] = useState("อาหารทั่วไป อาหารตามสั่ง อาหารจานเดียว");
     const [categorie2, setCategories2] = useState([]);
-    const [open, setOpen] = useState(false);
 
     const trigger = (
         <span>
@@ -30,42 +28,16 @@ const App = () => {
     const handleChange =() => {
         return(
             <div className="wrapper">
-                {console.log('kk')}
                 <img id="slide" src="http://lorempixel.com/output/cats-q-c-100-100-4.jpg" />
             </div>
         )
     }
 
-    const Tomap = () => {
+    const CheckSub = () => {
+        if(value != ''){
         return(
             <div>
-                <h4><strong>ประเภทร้านค้า</strong></h4>
-                <input type="radio" value="ทั้งหมด" checked={value === ''} onChange={(e) => {setValue(''); setCategories2([]); setValue2('')}} />
-                <span style={{paddingLeft: 5}}>ทั้งหมด</span>
-                {categorie.map((cat) => {
-                        return (
-                            <div>
-                                <form>
-                                    <label style={{fontWeight: "normal"}}>
-                                        <input type="radio" value={cat.name} checked={value===cat.name} onChange={(e) => {setValue(e.target.value); setCategories2(cat.subcategories); }} />
-                                        <span style={{paddingLeft: 5}}>{cat.name}</span>
-                                    </label>  
-                                    <br /> 
-                                </form>
-                            </div>
-                        )                        
-                })}
-                <br />
-                <h4><strong>จังหวัด/ใกล้ฉัน</strong></h4>
-                <Dropdown2 prices={province}/>
-                <br />
-
-                <h4><strong>ราคา</strong></h4>
-                <Dropdown2 prices={price}/>
-                <br />
-
                 <h4><strong>ประเภท{value}</strong></h4>
-
                 <input type="radio" value="ทั้งหมด" checked={value2 === "ทั้งหมด"} onChange={(e) => setValue2(e.target.value)} />
                 <span style={{paddingLeft: 5}}>ทั้งหมด</span>
                 {categorie2.map((catt) => {
@@ -87,6 +59,41 @@ const App = () => {
                     }})     
                     
                 }
+            </div>
+        )
+        }else{
+            return false;
+        }
+    }
+
+    const Tomap = () => {
+        return(
+            <div>
+                <h4><strong>ประเภทร้านค้า</strong></h4>
+                <input type="radio" value="ทั้งหมด" checked={value === ''} onChange={(e) => {setValue(''); setCategories2([]); setValue2('')}} />
+                <span style={{paddingLeft: 5}}>ทั้งหมด</span>
+                {categorie.map((cat) => {
+                        return (
+                            <div>
+                                <form>
+                                    <label style={{fontWeight: "normal"}}>
+                                        <input type="radio" value={cat.name} checked={value===cat.name} onChange={(e) => {setValue(e.target.value); setValue2(''); setCategories2(cat.subcategories); }} />
+                                        <span style={{paddingLeft: 5}}>{cat.name}</span>
+                                    </label>  
+                                    <br /> 
+                                </form>
+                            </div>
+                        )                        
+                })}
+                <br />
+                <h4><strong>จังหวัด/ใกล้ฉัน</strong></h4>
+                <Dropdown2 prices={province}/>
+                <br />
+
+                <h4><strong>ราคา</strong></h4>
+                <Dropdown2 prices={price}/>
+                <br />
+                <CheckSub />
             </div>   
         );
                               
@@ -99,9 +106,11 @@ const App = () => {
             return(
                 <div>
                     {merchant.map(shop => {
+                        // {console.log(shop.highlightText)}
+                        {console.log(ReactHtmlParser(shop.highlightText))}
                         return(
-                            <div className="main col-md-3 col-sm-12 col-xs-12">
-                                <div className="cajaContenido col-sm-8">
+                            <div className="main">
+                                <div className="cajaContenido col-sm-12">
                                     <img className="ShopPic" src={shop.coverImageId} />
                                         <div className="ShopDetail">
                                             <h2><strong>{shop.shopNameTH}</strong></h2>
@@ -129,8 +138,8 @@ const App = () => {
                                     <div className="ShopDetail">
                                         <h2><strong>{shop2.shopNameTH}</strong></h2>
                                         {shop2.subcategoryName} | $ | {shop2.addressDistrictName} {shop2.addressProvinceName} <br />
-                                        {shop2.highlightText} <br />
                                         <hr className="new1"/>
+                                        {shop2.highlightText} <br />
                                         <strong>เมนูแนะนำ</strong> <s/>
                                         {shop2.recommendedItems.join(', ')}
                                     </div>
@@ -164,7 +173,9 @@ const App = () => {
                 <Input className="searchbar" fluid action={{ icon: 'search' }} placeholder='ค้น ชื่อ ร้านอาหาร และ เครื่องดื่ม ร้านธงฟ้า ร้านOTOP และ ร้านทั่วไป' />
                 <img className="visible-xs" src={filter} onClick={handleChange} /><t /><s />
             </div>
-            <div className="header">หน้าแรก / ค้นหา</div>
+            <div className="header">
+                <div className="header_box">หน้าแรก / <strong>ค้นหา</strong></div>
+            </div>
             <br />
             <h3 style={{paddingLeft: 10}}><strong>ผลการค้นหา {value} ทั้งหมด</strong></h3>
             <br />

@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/YWC_18_3/static/css/main.34ad85fb.chunk.css",
-    "main.js": "/YWC_18_3/static/js/main.1f0f894a.chunk.js",
-    "main.js.map": "/YWC_18_3/static/js/main.1f0f894a.chunk.js.map",
+    "main.css": "/YWC_18_3/static/css/main.7658da48.chunk.css",
+    "main.js": "/YWC_18_3/static/js/main.c5760da4.chunk.js",
+    "main.js.map": "/YWC_18_3/static/js/main.c5760da4.chunk.js.map",
     "runtime-main.js": "/YWC_18_3/static/js/runtime-main.49bcf753.js",
     "runtime-main.js.map": "/YWC_18_3/static/js/runtime-main.49bcf753.js.map",
-    "static/js/2.f4744195.chunk.js": "/YWC_18_3/static/js/2.f4744195.chunk.js",
-    "static/js/2.f4744195.chunk.js.map": "/YWC_18_3/static/js/2.f4744195.chunk.js.map",
+    "static/js/2.3232d5e4.chunk.js": "/YWC_18_3/static/js/2.3232d5e4.chunk.js",
+    "static/js/2.3232d5e4.chunk.js.map": "/YWC_18_3/static/js/2.3232d5e4.chunk.js.map",
     "index.html": "/YWC_18_3/index.html",
-    "static/css/main.34ad85fb.chunk.css.map": "/YWC_18_3/static/css/main.34ad85fb.chunk.css.map",
-    "static/js/2.f4744195.chunk.js.LICENSE.txt": "/YWC_18_3/static/js/2.f4744195.chunk.js.LICENSE.txt",
-    "static/media/Box.css": "/YWC_18_3/static/media/result-bg.ac869927.png"
+    "static/css/main.7658da48.chunk.css.map": "/YWC_18_3/static/css/main.7658da48.chunk.css.map",
+    "static/js/2.3232d5e4.chunk.js.LICENSE.txt": "/YWC_18_3/static/js/2.3232d5e4.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/YWC_18_3/static/media/result-bg.ac869927.png"
   },
   "entrypoints": [
     "static/js/runtime-main.49bcf753.js",
-    "static/js/2.f4744195.chunk.js",
-    "static/css/main.34ad85fb.chunk.css",
-    "static/js/main.1f0f894a.chunk.js"
+    "static/js/2.3232d5e4.chunk.js",
+    "static/css/main.7658da48.chunk.css",
+    "static/js/main.c5760da4.chunk.js"
   ]
 }

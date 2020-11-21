@@ -8,7 +8,7 @@ import {Dropdown, Icon, Input} from 'semantic-ui-react';
 import filter from './components/Pic/filter.png'
 import './App.css';
 import ReactHtmlParser from 'react-html-parser';
-
+import './components/Dropdown.css';
 const App = () => {
     let total = 0;
     const [categorie, setCategories] = useState([]);
@@ -33,8 +33,9 @@ const App = () => {
         )
     }
 
+
     const CheckSub = () => {
-        if(value != ''){
+        if(value != '' && value != 'ร้านธงฟ้า'){
         return(
             <div>
                 <h4><strong>ประเภท{value}</strong></h4>

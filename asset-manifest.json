@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/YWC_18_3/static/css/main.2f2a023e.chunk.css",
-    "main.js": "/YWC_18_3/static/js/main.ca15b935.chunk.js",
-    "main.js.map": "/YWC_18_3/static/js/main.ca15b935.chunk.js.map",
+    "main.css": "/YWC_18_3/static/css/main.26d7b2ec.chunk.css",
+    "main.js": "/YWC_18_3/static/js/main.26fd9e64.chunk.js",
+    "main.js.map": "/YWC_18_3/static/js/main.26fd9e64.chunk.js.map",
     "runtime-main.js": "/YWC_18_3/static/js/runtime-main.49bcf753.js",
     "runtime-main.js.map": "/YWC_18_3/static/js/runtime-main.49bcf753.js.map",
     "static/js/2.bbc5a44c.chunk.js": "/YWC_18_3/static/js/2.bbc5a44c.chunk.js",
     "static/js/2.bbc5a44c.chunk.js.map": "/YWC_18_3/static/js/2.bbc5a44c.chunk.js.map",
     "index.html": "/YWC_18_3/index.html",
-    "static/css/main.2f2a023e.chunk.css.map": "/YWC_18_3/static/css/main.2f2a023e.chunk.css.map",
+    "static/css/main.26d7b2ec.chunk.css.map": "/YWC_18_3/static/css/main.26d7b2ec.chunk.css.map",
     "static/js/2.bbc5a44c.chunk.js.LICENSE.txt": "/YWC_18_3/static/js/2.bbc5a44c.chunk.js.LICENSE.txt",
     "static/media/App.css": "/YWC_18_3/static/media/result-bg.ac869927.png"
   },
   "entrypoints": [
     "static/js/runtime-main.49bcf753.js",
     "static/js/2.bbc5a44c.chunk.js",
-    "static/css/main.2f2a023e.chunk.css",
-    "static/js/main.ca15b935.chunk.js"
+    "static/css/main.26d7b2ec.chunk.css",
+    "static/js/main.26fd9e64.chunk.js"
   ]
 }

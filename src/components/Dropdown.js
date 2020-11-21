@@ -5,7 +5,7 @@ import './Box.css';
 const Dropdown = ({prices}) => {
     const [dropdown, setDropdown] = useState('');
     return (
-        <form >
+        <form classname="Form">
             <select className="dropbox" value={dropdown} onChange={(e) => setDropdown(e.target.value)}>
                 {prices.map((price) => {
                     return(

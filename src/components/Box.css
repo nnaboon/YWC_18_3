@@ -174,3 +174,8 @@
   @media (max-width: 767px) {
     .LogoPic{width: 60px; margin-top: 20px; margin-left: 50px;}
   }
+
+  .ui.action.input>.button {
+    background-color: #f8f8f8;
+    padding: 0 24px;
+}
